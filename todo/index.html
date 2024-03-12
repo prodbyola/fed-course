@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/index.css" />
+    </head>
+    <body>
+        <div id="tasks"></div>
+        <div class="task_form">
+            <h3 class="form_header">Add New Task</h3>
+            <div class="inner_form">
+                <div class="app_input">
+                    <label>Task Label</label>
+                    <input id="task-label" />
+                </div>
+                <div class="app_input">
+                    <label>Task Description</label>
+                    <textarea id="task-desc"></textarea>
+                </div>
+                <div class="app_input">
+                    <label>Task Category</label>
+                    <select id="task-group">
+                        <option>House Chores</option>
+                        <option>School Assignments</option>
+                        <option>Office Works</option>
+                    </select>
+                </div>
+                <button onclick="createTask()">Add Task</button>
+            </div>
+        </div>
+        <script src="assets/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+p,
+h3,
+h4,
+label {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 34px;
+}
+
+.form_header {
+    text-align: center;
+}
+
+input, textarea, select {
+    width: 100%;
+    box-sizing: border-box;
+    height: 44px;
+    border-radius: 8px;
+    padding: 0 12px;
+    margin-bottom: 18px;
+    border: 1px solid black;
+}
+
+textarea {
+    height: 220px;
+    padding-top: 8px;
+}
+
+button {
+    float: right;
+    width: 144px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    background-color: #ff00ee;
+    color: white;
+}
+
+.task_card {
+    padding: 18px 14px;
+    border: 1px solid black;
+    margin-bottom: 16px;
+}
+
+.task_label {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.822);
+}
+
+.task_desc {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.task_group {
+    color: green;
+}
+
+#tasks {
+    width: 344px;
+}
