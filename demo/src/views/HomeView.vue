@@ -5,12 +5,13 @@
       v-for="(movie, index) in movies" 
       :key="index" 
       :location="movie.location" 
-      :title="movie.location"
+      :title="movie.title"
       :rating="movie.rating" 
       :percent="movie.percent" 
       :cats="movie.cats" 
       :img="movie.img" 
     />
+
   </main>
 </template>
 <script lang="ts" setup>
@@ -54,15 +55,6 @@ const movie4 = {
 }
 
 const movies = [movie1, movie2, movie3, movie4]
-
-const myFunc = (num1: number, num2: number) => {
-  const add = num1 + num2
-
-  console.log(add)
-}
-
-myFunc(25, 62)
-myFunc(36, 24)
 </script>
 <style scoped>
 .main_page {
@@ -70,5 +62,17 @@ myFunc(36, 24)
   column-gap: 64px;
   width: 1200px;
   flex-wrap: wrap;
+}
+
+.app_btn {
+  width: 300px;
+  height: 72px;
+  font-size: 32px;
+  background-color: rgb(5, 5, 94);
+  color: white;
+  margin-bottom: 32px;
+  margin-top: 12px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 </style>

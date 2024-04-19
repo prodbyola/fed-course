@@ -17,6 +17,7 @@
 <script setup lang="ts">
 import MovieRating from './MovieRating.vue';
 import AppButton from './AppButton.vue';
+
 </script>
 <style scoped>
 .banner {
