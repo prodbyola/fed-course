@@ -5,3 +5,8 @@ import { RouterView } from 'vue-router'
 <template>
   <RouterView />
 </template>
+<style scoped>
+body {
+  display: block !important;
+}
+</style>

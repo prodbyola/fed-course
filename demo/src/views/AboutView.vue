@@ -1,27 +1,23 @@
 <template>
     <main>
-        <p id="my-text" class="my-number">{{ text }}</p>
-        <button 
-            @click="changePosition"
-            class="btn"
-        >Move</button>
+        <input v-model="myText" placeholder="My Text" />
+        <button @click="changeText">Click Me</button>
+        <p class="my-text">{{ myText }}</p>
     </main>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const text = ref("MyText")
-const pos = ref(0)
+let myText = ref("Olamide")
 
-const changePosition = () => {
-    const textBox = document.getElementById("my-text")
-    if(textBox){
-        pos.value += 1
-        textBox.style.marginLeft = pos.value+"px"
-    }
+const changeText = () => {
+    myText.value = "Clicked Value"
 }
 </script>
 <style scoped>
+.my-text {
+    margin-top: 35px;
+}
 .my-number {
     font-size: 60px;
 }
