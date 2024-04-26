@@ -1,16 +1,4 @@
 <template>
-    <main class="container">
-        <MovieBox
-            v-for="(movie, index) in movies"
-            :key="index" 
-            :location="movie.location"
-            :title="movie.title"
-            :rating="movie.rating"
-            :cats="movie.cats"
-            :img="movie.img"
-            :percent="movie.percent"
-        />
-    </main>
     <div class="mf_container">
         <div class="movie_form">
             <h3 class="movie_form__title">Upload New Movie</h3>
@@ -25,18 +13,10 @@
     </div>
 </template>
 <script setup lang="ts">
-import { reactive, ref } from 'vue';
+import { reactive } from 'vue';
+import { useStore } from '@/stores';
 
-import MovieBox from '@/components/MovieBox.vue';
-
-const movie1 = {
-  location: 'USA, 2016 - Current',
-  title: 'Stranger Things',
-  rating: '86.0 / 100',
-  percent: 97,
-  cats: 'Action, Adventure, Horror',
-  img: '/images/poster1.png'
-}
+const store = useStore()
 
 const emptyMovie = {
     location: '',
@@ -48,11 +28,10 @@ const emptyMovie = {
 }
 
 let movieForm = reactive(emptyMovie)
-const movies = ref([movie1])
+
 
 const uploadMovie = () => {
-    console.log(movieForm)
-    movies.value.push(movieForm)
+    store.movies.push(movieForm)
     movieForm = reactive(emptyMovie)
 }
 
